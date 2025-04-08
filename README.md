@@ -72,9 +72,9 @@ This project simulates a **Smart Agriculture Monitoring System** using **AWS IoT
 
 
 ---
-🎥 Demo Video
-Watch the video
-📺 Watch the demo video on YouTube
+#🎥 Demo Video
+https://youtu.be/m9mYeabbnJE
+
 ---
 
 ## 🧪 How to Run
