@@ -62,6 +62,16 @@ This project simulates a **Smart Agriculture Monitoring System** using **AWS IoT
 7. *(Optional)* Connect **QuickSight** to DynamoDB for dashboards.
 
 ---
+## 📚 References
+AWS IoT Core Documentation
+
+AWS DynamoDB Developer Guide
+
+MQTT Protocol - paho-mqtt
+
+
+
+---
 
 ## 🧪 How to Run
 
@@ -79,3 +89,4 @@ pip install paho-mqtt
 
 # Run the simulation
 python simulate_sensor.py
+
