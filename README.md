@@ -1,83 +1,81 @@
-🌾 Smart Agriculture Monitoring System using AWS IoT Core (Cloud-Based, No Hardware)
-This project simulates a Smart Agriculture Monitoring System using AWS IoT Core and other cloud services. It replicates sensor data (e.g., temperature, humidity, soil moisture) and publishes it to AWS IoT Core using MQTT — all without physical hardware.
-________________________________________
-📌 Table of Contents
-•	Features
-•	Technologies Used
-•	System Architecture
-•	AWS Setup
-•	How to Run
-•	Folder Structure
-•	Project Report
-•	References
-•	Acknowledgments
-________________________________________
-🚀 Features
-•	Simulates temperature, humidity, and soil moisture data
-•	Publishes sensor data to AWS IoT Core using MQTT
-•	Stores incoming data in AWS DynamoDB via IoT Rules
-•	(Optional) Sends alerts using AWS SNS
-•	(Optional) Visualizes data trends using AWS QuickSight
-________________________________________
-🛠️ Technologies Used
-•	Python (paho-mqtt)
-•	AWS IoT Core
-•	AWS DynamoDB
-•	AWS IAM
-•	AWS SNS (optional)
-•	AWS QuickSight (optional)
-________________________________________
-🏗️ System Architecture
-1.	Simulated sensors generate data using Python.
-2.	Data is transmitted via MQTT to AWS IoT Core.
-3.	IoT Rule routes data to DynamoDB table.
-4.	(Optional) AWS SNS sends alerts based on thresholds.
-5.	(Optional) AWS QuickSight visualizes sensor data.
-________________________________________
-⚙️ AWS Setup
-1.	Create an IoT Thing in AWS IoT Core.
-2.	Download certificates (.crt, .key, Amazon Root CA).
-3.	Create an IoT Rule to insert incoming data into DynamoDB.
-4.	Create a DynamoDB table (e.g., SmartAgriData).
-5.	(Optional) Set up an SNS topic and email subscription.
-6.	(Optional) Configure QuickSight for dashboards.
-________________________________________
-🧪 How to Run
-Clone the repository:
-bash
-CopyEdit
-git clone https://github.com/your-username/smart-agriculture-aws.git cd smart-agriculture-aws 
-Install Python dependencies:
-bash
-CopyEdit
-pip install paho-mqtt 
-Update simulate_sensor.py with:
-•	Your AWS IoT endpoint
-•	Certificate/key file paths
-Then run the script:
-bash
-CopyEdit
-python simulate_sensor.py 
-________________________________________
-📁 Folder Structure
-.
-├── simulate_sensor.py         # Simulated sensor publisher
-├── certs/                     # AWS IoT certificates
-├── docs/                      # Project report and diagrams
-├── README.md                  # This file
-________________________________________
-📄 Project Report
-A full project report is available in the docs/ directory:
-📘 Smart_Agriculture_Monitoring_Project_Report.pdf
-________________________________________
-📚 References
-•	AWS IoT Core Documentation
-•	AWS DynamoDB Developer Guide
-•	MQTT Protocol (paho-mqtt)
-________________________________________
-🙏 Acknowledgments
-This project was completed under the guidance of
-Ms. P. Sree Lakshmi
-Cloud Based AIML Speciality Course
-K L Deemed to be University, Hyderabad
+# 🌾 Smart Agriculture Monitoring System using AWS IoT Core (Cloud-Based, No Hardware)
 
+This project simulates a **Smart Agriculture Monitoring System** using **AWS IoT Core** and other cloud services. It replicates real-time environmental sensor data (e.g., temperature, humidity, soil moisture) and publishes it to AWS IoT Core using MQTT — **all without physical hardware**.
+
+---
+
+## 📌 Table of Contents
+
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [System Architecture](#system-architecture)
+- [AWS Setup](#aws-setup)
+- [How to Run](#how-to-run)
+- [Folder Structure](#folder-structure)
+- [Project Report](#project-report)
+- [References](#references)
+- [Acknowledgments](#acknowledgments)
+
+---
+
+## 🚀 Features
+
+- Simulates temperature, humidity, and soil moisture data.
+- Publishes sensor data to AWS IoT Core via MQTT.
+- Stores incoming data in DynamoDB using IoT Rules.
+- *(Optional)* Sends alerts via AWS SNS based on thresholds.
+- *(Optional)* Visualizes trends using AWS QuickSight.
+
+---
+
+## 🛠️ Technologies Used
+
+- Python (paho-mqtt)
+- AWS IoT Core
+- AWS DynamoDB
+- AWS IAM
+- AWS SNS *(optional)*
+- AWS QuickSight *(optional)*
+
+---
+
+## 🏗️ System Architecture
+
+1. Simulated sensors generate data using Python.
+2. Data is published to AWS IoT Core over MQTT.
+3. IoT Rule routes the data to DynamoDB.
+4. *(Optional)* AWS SNS sends notifications if thresholds are crossed.
+5. *(Optional)* AWS QuickSight provides visualization dashboards.
+
+![architecture-diagram](docs/system_architecture.png) <!-- Add your architecture diagram in docs/ -->
+
+---
+
+## ⚙️ AWS Setup
+
+1. Create a **Thing** in AWS IoT Core.
+2. Download your **Device Certificate**, **Private Key**, and **Amazon Root CA**.
+3. Attach an IoT Policy to allow publishing.
+4. Create a **DynamoDB table** (e.g., `SmartAgriData`) with `timestamp` as the primary key.
+5. Create an **IoT Rule** to forward messages to DynamoDB.
+6. *(Optional)* Set up **SNS Topic** and subscription for alerts.
+7. *(Optional)* Connect **QuickSight** to DynamoDB for dashboards.
+
+---
+
+## 🧪 How to Run
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/smart-agriculture-aws.git
+cd smart-agriculture-aws
+
+# Install dependencies
+pip install paho-mqtt
+
+# Configure simulate_sensor.py with your:
+# - AWS IoT endpoint
+# - Certificate, private key, and CA file paths
+
+# Run the simulation
+python simulate_sensor.py
