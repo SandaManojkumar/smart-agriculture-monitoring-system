@@ -63,11 +63,11 @@ This project simulates a **Smart Agriculture Monitoring System** using **AWS IoT
 
 ---
 ## 📚 References
-AWS IoT Core Documentation
+- AWS IoT Core Documentation
 
-AWS DynamoDB Developer Guide
+- AWS DynamoDB Developer Guide
 
-MQTT Protocol - paho-mqtt
+- MQTT Protocol - paho-mqtt
 
 
 
